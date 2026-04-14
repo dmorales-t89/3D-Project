@@ -25,7 +25,7 @@ export const Overlay = () => {
   const [opacityLastSection, setOpacityLastSection] = useState(1)
 
   useFrame(() => {
-    setOpacityFirstSection(scroll.range(0, 1 / 3))
+    setOpacityFirstSection(scroll.curve(0, 1 / 3))
     setOpacitySecondSection(scroll.curve(1 / 3, 1 / 3))
     setOpacityLastSection(scroll.range(2 / 3, 1 / 3))
   })
@@ -34,49 +34,39 @@ export const Overlay = () => {
     <Scroll html>
       <div className="overlayRoot">
         <Section opacity={opacityFirstSection}>
-          <h1 className="overlayTitle">Heaven</h1>
-          <p className="overlayMuted">Welcome to my heaven</p>
-          <p className="mt3">I know:</p>
+          <h1 className="overlayTitle">Is there a heaven?</h1>
+          <p className="overlayMuted">I did not think about it much.</p>
           <ul className="overlayList">
-            <li>How to code</li>
-            <li>How to learn</li>
-            <li>How to deliver</li>
+            <li>-Just lived my life</li>
+            <li>-Tried to be a good person</li>
+            <li>-Helped others when I could</li>
           </ul>
-          <p className="overlayBounce mt6">↓</p>
+          <p className="overlayBounce mt6">I was a kid!</p>
         </Section>
 
         <Section right opacity={opacitySecondSection}>
-          <h1 className="overlayTitle">Here are my skillsets 🔥</h1>
-          <p className="overlayMuted">PS: I never test</p>
-          <p className="mt3">
-            <b>Frontend 🚀</b>
-          </p>
+          <h1 className="overlayTitle">Is this heaven?</h1>
+          <p className="overlayMuted">As my faith grew I pictured heaven like this:</p>
           <ul className="overlayList">
-            <li>ReactJS</li>
-            <li>React Native</li>
-            <li>VueJS</li>
-            <li>Tailwind</li>
+            <li>-Above the clouds</li>
+            <li>-Very white</li>
+            <li>-Full of light</li>
           </ul>
-          <p className="mt3">
-            <b>Backend 🔬</b>
-          </p>
-          <ul className="overlayList">
-            <li>NodeJS</li>
-            <li>tRPC</li>
-            <li>NestJS</li>
-            <li>PostgreSQL</li>
-          </ul>
-          <p className="overlayBounce mt6">↓</p>
+          <p className="overlayBounce mt6">Who knows?</p>
         </Section>
 
         <Section opacity={opacityLastSection}>
-          <h1 className="overlayTitle"></h1>
-          <p className="overlayMuted">
-            I'm very expensive but you won't regret it
-          </p>
-          <p className="overlayLinkRow">
-             <a href="tel:(+42) 4242-4242-424242">(+42) 4242-4242-424242</a>
-          </p>
+          <h1 className="overlayTitle">Currently:</h1>
+          <p className="overlayMuted">Heaven seems more whimsical to me:</p>
+          <ul className="overlayList">
+            <li>-Dream like</li>
+            <li>-Full of colors</li>
+            <li>-Full of life</li>
+            <li>-Lots of nature</li>
+            <li>-Inexplicable</li>
+
+          </ul>
+          <p className="overlayBounce mt6">I would love to live here!</p>
         </Section>
       </div>
     </Scroll>
